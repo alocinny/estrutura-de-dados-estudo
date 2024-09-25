@@ -1,0 +1,7 @@
+primeiro que entra é o primeiro que sai
+
+push -> adiciona a fila
+pop -> retira o primeiro elemento da fila
+empty -> retorna true se for uma fila vazia
+top -> retorna o elemento disponível to inicio da fila
+size -> retorna o tamanho

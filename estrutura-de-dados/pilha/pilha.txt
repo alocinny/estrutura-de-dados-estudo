@@ -1,0 +1,15 @@
+a estrutura de pilha é um método de organizar os dados de forma que fiquem empilhados, colocando dados um sobre o outro. LIFO - last in first out 
+
+push -> inclui um elemento, coloca sobre a pilha 
+pop -> elimina um elemento da pilha, tira o último elemento
+empty -> retorna true para pilha vazia e false para não vazia
+top -> retorna quem é o elemento proximo da estrutura 
+size -> reotrna tamanho da pilha
+
+stack -> objetos 
+- top -> aponta pro elemento mais alto da pilha
+- size -> tamanho da pilha
+
+node -> objeto
+- data -> valor
+- next -> proximo valor
