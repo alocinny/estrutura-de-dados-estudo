@@ -1,0 +1,12 @@
+O(1) -> quando a operação realizada (acessar o primeiro elemento) não depende do tamanho da entrada. Apenas uma operação é necessária, independentemente do tamanho do array
+
+O(logn) -> array dividido ao meio em cada iteração, reduzindo o espaço de busca exponencialmente. Cada vez que o tamanho da entrada dobra, apenas uma operação adicional é necessária. 
+A cada iteração, o array é dividido ao meio. Esse comportamento de divisão indica uma complexidade O(logn), pois o número de operações cresce logaritmicamente em relação ao tamanho da entrada.
+
+O(n) -> a função percorre todos os elementos do array de uma vez, realizando uma comparação para cada um. Como cada elemento precisa ser processado, o número de operações aumenta linearmente.
+
+O(n*logn) -> o algoritmo divide o array em subarrays (logaritmicamente) e depois combina os elementos (linearmente).
+
+O(n^2) -> possui dois loops aninhados, cada um com n iterações, fazendo com que o número de operações cresça com o quadrado do tamanho de entrada.
+
+O(n!) -> para cada elemento existe uma nova combinação de (n-1)! elementos. Para cada elemento há um novo conjunto de permutações 

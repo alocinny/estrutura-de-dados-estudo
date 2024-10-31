@@ -1,0 +1,5 @@
+na opção 1 o sistema precisaria buscar repetidamente cada produto para atualizar seu total. Em uma lista ou estrutura linear, a busca do produto pode levar tempo proporcional ao número de produtos, resultando em uma complexidade O(n*m), onde n é o número de vendas e m é o número de produtos
+
+na opção 2, com um dicionário, a busca e atualização de vendas para cada produto é feita em O(1), então a complexidade para processar todas as vendas seria O(n), onde n é o número de vendas
+
+assim, a opção 2 é mais eficiente, pois permite que cada venda seja processada em um tempo constante. A primeira opção só seria boa se o npumero de vendas e produtos fosse pequena.
