@@ -1,4 +1,4 @@
 primeiro o código percorre metade dos elementos e chama a função sorting para cada um deles, como cada chamada do sorting tem complexidade O(logn), essa primeira etapa leva, no total, O(nlogn)
 depois, o código passa pelos elementos do array novamente e chama sorting várias vezes, movendo para a sua posição correta. Assim como na primeira etapa, cada operação exige O(logn) e é feita n vezes, resultando em uma complexidade de O(nlogn)
 
-conclusão: O(logn)
+conclusão: O(nlogn)
