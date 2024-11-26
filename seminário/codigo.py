@@ -1,4 +1,5 @@
 import networkx as nx
+import matplotlib.pyplot as plt
 
 # Função para criar um grafo com dependências
 def criar_grafo():
@@ -20,15 +21,16 @@ def criar_grafo():
 def buscar_hazards(grafo):
     hazards = []
     for node in grafo.nodes:
-        # Para cada nó, verificamos os predecessores e sucessores
         predecessores = list(grafo.predecessors(node))
-        sucessores = list(grafo.successors(node))
-        # Hazard ocorre quando dois predecessores têm conflitos com o mesmo sucessor
-        for i in range(len(predecessores)):
-            for j in range(i + 1, len(predecessores)):
-                if predecessores[i] in grafo and predecessores[j] in grafo:
-                    if any(suc in grafo.successors(predecessores[i]) for suc in sucessores):
-                        hazards.append((predecessores[i], predecessores[j], node))
+        
+        # Verifica dependências que podem causar hazards
+        if len(predecessores) > 1:
+            for i in range(len(predecessores)):
+                for j in range(i + 1, len(predecessores)):
+                    # Verifica se dois predecessores têm um nó em comum como sucessor
+                    pre1, pre2 = predecessores[i], predecessores[j]
+                    if pre1 in grafo and pre2 in grafo:
+                        hazards.append((pre1, pre2, node))
     return hazards
 
 # Exemplo de uso
@@ -46,9 +48,6 @@ if hazards:
         print(f"Hazard entre {hazard[0]} e {hazard[1]} no nó {hazard[2]}")
 else:
     print("\nNenhum hazard encontrado.")
-
-
-import matplotlib.pyplot as plt
 
 # Plotar o grafo
 pos = nx.spring_layout(grafo)
