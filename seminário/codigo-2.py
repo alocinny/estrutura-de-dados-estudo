@@ -53,6 +53,7 @@ def plotar_grafo_durante_analise(grafo, pos, no_atual):
     
     plt.title(f"Analisando nó: {no_atual}")
     plt.pause(3)  # Pausa para visualizar a análise
+    plt.close()
 
 # Função para destacar hazards no grafo
 def plotar_grafo_com_hazards(grafo, hazards):
