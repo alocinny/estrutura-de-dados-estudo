@@ -22,14 +22,17 @@ def buscar_hazards(grafo):
     hazards = []
     for node in grafo.nodes:
         predecessores = list(grafo.predecessors(node))
-        
+        print("lista predecessores ", predecessores, "\n")
         # Verifica dependências que podem causar hazards
         if len(predecessores) > 1:
+            print("entrou no if > 1 ", predecessores, "\n")
             for i in range(len(predecessores)):
                 for j in range(i + 1, len(predecessores)):
+                    print("entrou no for ", predecessores[i], " ", predecessores[j], "\n")
                     # Verifica se dois predecessores têm um nó em comum como sucessor
                     pre1, pre2 = predecessores[i], predecessores[j]
                     if pre1 in grafo and pre2 in grafo:
+                        print("entrou no if pre1 e pre2 ", pre1, " ", pre2, "\n")
                         hazards.append((pre1, pre2, node))
     return hazards
 
